@@ -1,0 +1,74 @@
+<div class="breadcrumbs">
+  <span class="siteHomeIco"></span><a href="#">任务管理</a> &gt;
+  <a href="#">任务查询</a>
+</div>
+<div class="taskInquiry">
+			        <div id="searchConditionDiv" class="taskInquiryCon k-content" ng-show="vm.visible">
+			            <table>
+			                <colgroup>
+			                    <col width="9%"/>
+			                    <col width="23%"/>
+			                    <col width="11%"/>
+			                    <col width="23%"/>
+			                    <col width="11%"/>
+			                    <col width="23%"/>
+			                </colgroup>
+			                <tr>
+			                    <td align="left">
+			                    <span class="textLabelModule first">
+			                        <label>名称</label>
+			                    </span>
+			                    </td>
+			                    <td><input type="text" ng-model="vm.condition.siteName" class="form-control"/></td>
+
+			                    <td align="left">
+			                    <span class="textLabelModule">
+			                        <label>所属行政区划</label>
+			                    </span>
+			                    </td>
+			                    <td>
+				                    <select  ng-options="p.district group by p.city for p in vm.provinces track by p.regionId" ng-model="vm.condition.regionId" class="form-control">
+				                    <option value=""></option>
+				                    </select>
+			                    </td>
+			                     <td align="left">
+				                    <span class="textLabelModule">
+				                        <label>用户</label>
+				                    </span>
+			                    </td>
+			                    <td>
+			                     	<input type="text" ng-model="vm.condition.userId" placeholder="请录入人员账号或姓名查询" typeahead="user as user.userName for user in getUser($viewValue)"  typeahead-min-length="2" typeahead-select-on-exact="true" typeahead-wait-ms="50"  class="form-control">
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td align="left">
+				                    <span class="textLabelModule first">
+				                        <label>状态</label>
+				                    </span>
+			                    </td>
+			                    <td>
+				                    <select  ng-options="s.label for s in vm.statusList track by s.value" ng-model="vm.condition.status" class="form-control">
+				                    <option value=""></option>
+				                    </select>
+			                    </td>
+			                </tr>
+			            </table>
+			        </div>
+			        <div class="submit_from" ng-show="vm.visible">
+			            <div class="submit_btn task_btnDiv" align="center">
+			                <div class="button mainBtn" id="btnSearch"><span class="buttonText" ng-click="vm.query()">查 询</span></div>
+			                <div class="button mainBtn mgL5px" id="btnReset"><span class="buttonText" ng-click="vm.reset()">重 置</span></div>
+			            </div>
+			            <span class="leftButtom lfR"></span><span class="rightButtom rtR"></span>
+			        </div>
+        			<div class="topLine"></div>
+       				<div ng-class="{'toggleTop':vm.visible, 'toggleBot toggleTop':!vm.visible}" id="btnToggleSearchPanel" ng-click="vm.togglePanel()"><span class="currentTop"></span></div>
+    </div>
+
+    <div class="titleBox">
+        <h2>任务列表</h2>
+    </div>
+    <div id="taskListResultDiv" >
+    	<div ui-grid="gridOptions" ui-grid-pagination  ui-grid-resize-columns  class="grid" ></div>
+    </div>
+   </div>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+  <!--  <base href="/">-->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" style="margin-left:0px;">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="font-weight:bold"><demo/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li uib-dropdown uib-keyboard-nav>
+                    <a href="#" class="dropdown-toggle" uib-dropdown-toggle>任务管理 <span class="caret"></span></a>
+                    <ul class="uib-dropdown-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                        <li role="menuitem"><a ng-href="/#assign"><i class="icon-plus"></i>任务分配 </a></li>
+                        <li role="menuitem"><a ng-href="/#manage"><i class="icon-pencil"></i>任务管理</a></li>
+                        <li role="menuitem"><a ng-href="/#query"><i class="icon-search"></i>任务查询</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- <ul class="nav navbar-nav navbar-right">
+                 <li class="active"><a href="./">退出 <span class="sr-only">(current)</span></a></li>
+             </ul>-->
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <ng-view></ng-view>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <footer>
+                <div style="position:absolute;left:45%">&copy; 学习用途</div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

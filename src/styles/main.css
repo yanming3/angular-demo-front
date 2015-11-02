@@ -1,0 +1,836 @@
+html {
+    overflow: hidden;
+    font-size: 100%;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Microsoft YaHei', 'Arial', 'SimSun';
+    background: white;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, button,
+textarea, select, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+b {
+    vertical-align: middle;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    vertical-align: middle;
+    outline: 0;
+}
+  textarea {
+    border: 1px solid #dbdbde;
+    border-radius: 4px 4px 4px 4px;
+    resize: none;
+    color: #515967;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 12px;
+    font-family: 'Microsoft YaHei', 'Arial', 'SimSun';
+}
+
+button {
+    border: 0px;
+    background: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+a {
+    color: #2e7fb7;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+h2 {
+    color: #005395;
+    font-size: 16px;
+}
+
+label {
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline;
+}
+
+textarea:focus, input:focus {
+    outline: 0;
+}
+
+pre {
+    font-family: 'Microsoft YaHei', 'Arial', 'SimSun';
+}
+
+/* Table Style Of Resect */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 2px 0px;
+    font-size: 12px;
+    line-height: 15px;
+    text-overflow: clip;
+    word-break: break-all;
+    position: relative;
+}
+
+table tr {
+    height: 34px;
+}
+
+td span {
+    vertical-align: middle;
+}
+
+.detailInfoIco,
+.applyQuotePriceIco,
+.deleteSelectItemIco,
+.editRelatedItemsIco,
+.btnAddIco,
+.btnDeleteIco,
+.loadIco,
+.loadedIco,
+.loaddingIco,
+.addBtnIco,
+.addDisableBtnIco,
+.backBtnIco,
+.photoModuleBtnIco,
+.lockPhotoBtnIco,
+.normalPhotoBtnIco,
+.filterIco,
+.warningNormalIco,
+.warningIco,
+.warningYellowIco,
+.warningOrangeIco,
+.siteHomeIco,
+.gridSetIco,
+.gridSetHoverIco,
+.manIco,
+.searchIconBtnPos,
+.clearIconBtnPos,
+.errorImg,
+.warnImg,
+.mainTipsIcon,
+.collapseIco,
+.expandIco,
+.secondTipsIcon,
+.remarkBtnIco,
+.noRemarkBtnIco,
+.remarkedBtnIco,
+.markIco,
+.totallossIco,
+.sortTopBtnIco,
+.disable.sortTopBtnIco,
+.sortBottomBtnIco,
+.disable.sortBottomBtnIco,
+.disableDeleteIco,
+.disableAddIco,
+.uploadBtnIco,
+.enquiryIco,
+.salvageIco,
+.salvageingIco,
+.receiveIco,
+.offerIco,
+.forwardIco,
+.doubleDownArrow,
+.doubleUpArrow,
+.doubleDownArrowBlue,
+.doubleUpArrowBlue,
+.smallSaveBtnIco,
+.claimLinkBtnIco,
+.minPriceIco,
+.maxPriceIco,
+.warningCircleIco,
+.exceedWarningIco,
+.overplusWarningIco,
+.rulesIco,
+.redFlagIco,
+.redFlagIco {
+    background: url('../images/publicSprite.png') no-repeat;
+    width: 5px;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.doubleDownArrow,
+.doubleUpArrow,
+.doubleDownArrowBlue,
+.doubleUpArrowBlue {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.doubleDownArrow {
+    background-position: -350px 0px;
+}
+
+.doubleUpArrow {
+    background-position: -350px -22px;
+}
+
+.doubleDownArrowBlue {
+    background-position: -393px 0px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.doubleUpArrowBlue {
+    background-position: -393px -22px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.TipsImg,
+.remarkImg,
+.SaveImg,
+.SubmitImg,
+.PrintImg,
+.CancleImg,
+.AddVehicleImg,
+.ImportBatchImg,
+.DownModuleImg,
+.helpImg,
+.AudatexImg,
+.helpImgWhite {
+    background: url("../images/headerIcon.png");
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.helpImg {
+    width: 17px;
+    height: 17px;
+    background-position: 0 -597px;
+    background-repeat: no-repeat;
+}
+
+.helpImgWhite {
+    width: 17px;
+    height: 17px;
+    background-position: 0 -573px;
+    background-repeat: no-repeat;
+}
+
+.TipsImg {
+    background-position: 0px -51px;
+}
+
+.remarkImg {
+    background-position: 0 -198px;
+}
+
+.SaveImg {
+    background-position: 0 -101px;
+}
+
+.SubmitImg {
+    background-position: 0 -147px;
+}
+
+.PrintImg {
+    background-position: 0 0px;
+}
+
+.CancleImg {
+    background-position: 0 -256px;
+}
+
+.collapseIco,
+.expandIco {
+    background-position: -200px 0px;
+    width: 11px;
+    height: 7px;
+    cursor: pointer;
+}
+
+.collapseIco {
+    background-position: -200px -30px;
+}
+
+.horizontalLineIco {
+    background: url("../images/horizontalLineIco.png") center center no-repeat;
+    width: 6%;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.configIcoBtn,
+.deleteIcoBtn,
+.addIcoBtn,
+.addIcoActiveBtn,
+.disable.deleteIcoBtn,
+.settingIcoBtn {
+    background: url('../images/publicIcoBtn.png') no-repeat;
+    width: 22px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.menuIcoBtn {
+    background-position: 0px 0px;
+}
+
+.configIcoBtn {
+    background-position: 0px -30px;
+}
+
+.deleteIcoBtn {
+    background-position: 0px -60px;
+}
+
+.addIcoBtn {
+    background-position: 0px -90px;
+}
+
+.addIcoBtn:active {
+    background-position: right -90px;
+}
+
+.addIcoBtn.disable {
+    background-position: 0 -120px;
+}
+
+.menuIcoBtn:hover {
+    background-position: right 0px;
+}
+
+.configIcoBtn:hover {
+    background-position: right -30px;
+}
+
+.deleteIcoBtn:hover {
+    background-position: right -60px;
+}
+
+.disable.deleteIcoBtn {
+    background-position: right -120px;
+}
+
+.btnAddIco,
+.disable .btnAddIco {
+    background-position: 0px -290px;
+    width: 14px;
+    height: 14px;
+}
+
+.disableAddIco,
+.disable .btnAddIco {
+    background-position: -200px -370px;
+}
+
+.btnDeleteIco,
+.disable .btnDeleteIco {
+    background-position: -200px -340px;
+    width: 15px;
+    height: 15px;
+}
+
+.btnDeleteIco {
+    cursor: pointer;
+}
+
+.disable .btnDeleteIco {
+    background-position: -200px -310px;;
+}
+
+.loadIco,
+.loadedIco,
+.loaddingIco {
+    width: 16px;
+    height: 16px;
+    background-position: 0px -320px;
+}
+
+.loaddingIco {
+    background-position: 0px -350px;
+}
+
+.loadedIco {
+    background-position: 0px -380px;
+}
+
+.addBtnIco,
+.addDisableBtnIco {
+    background-position: 0px -420px;
+    width: 16px;
+    height: 16px;
+}
+
+.addDisableBtnIco {
+    background-position: 0px -400px;
+    cursor: default;
+}
+
+.backBtnIco {
+    background-position: 0px -450px;
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px 0;
+    cursor: pointer;
+}
+
+.zoomOutBtnIco {
+    background-position: 0px 0px;
+}
+
+.zoomInBtnIco {
+    background-position: 0px -30px;
+}
+
+.rotateBtnIco {
+    background-position: 0px -60px;
+}
+
+.invertBtnIco {
+    background-position: 0px -90px;
+}
+
+.lightBtnIco {
+    background-position: 0px -120px;
+}
+
+.resetBtnIco {
+    background-position: 0px -180px;
+}
+
+.saveBtnIco {
+    background-position: 0px -210px;
+}
+
+.siteHomeIco {
+    width: 17px;
+    height: 20px;
+    background-position: 0px -226px;
+}
+
+/* = Common Of Styles Start
+----------------------------------------------------------------------------------------------------*/
+/*  Button Style */
+.button {
+    margin-right: 5px;
+}
+
+.button,
+.buttonText {
+    background: url('../images/button.png') no-repeat 0px 0px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    display: inline-block;
+    color: #262626;
+    font-size: 0px;
+}
+
+.button .buttonText {
+    background-position: right 0px;
+    text-align: center;
+    margin-left: 5px;
+    padding-right: 5px;
+    margin-right: -5px;
+    font-size: 12px;
+}
+
+.button .IcoTextBtnBox.buttonText {
+    font-size: 0px;
+}
+
+.button .IcoTextBtnBox.buttonText label {
+    font-size: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+/* Site Of Button  */
+.submitBtn {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.submitBtn .popBtn {
+    margin-right: 10px;
+}
+
+.mainBtn .buttonText {
+    width: 95px;
+}
+
+.mainBtn:hover,
+.mainBtn.active {
+    background-position: 0px -50px;
+}
+
+.mainBtn:hover .buttonText,
+.mainBtn.active .buttonText {
+    background-position: right -50px;
+}
+
+.comBtn {
+    background-position: 0px -200px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.comBtn .buttonText {
+    background-position: right -200px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.comBtn:hover {
+    background-position: 0px -250px;
+}
+
+.comBtn:hover .buttonText {
+    background-position: right -250px;
+}
+
+.normalBtn {
+    top: 0;
+    right: 0px;
+    background-position: 0px -400px;
+    height: 28px;
+}
+
+.normalBtn .buttonText {
+    background-position: right -400px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+.normalBtn:hover {
+    background-position: 0px -450px;
+}
+
+.normalBtn:hover .buttonText {
+    background-position: right -450px;
+}
+
+.searchIconBtnPos,
+.clearIconBtnPos {
+    position: absolute;
+    right: 9px;
+    top: 0.3em;
+    width: 16px;
+    height: 16px;
+    background-position: -100px -180px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Breadcrumbs link style*/
+.breadcrumbs {
+    color: #6e7072;
+    padding-top: 50px;
+    padding-bottom: -40px;
+    margin-bottom: 0px;
+}
+
+.breadcrumbs a {
+    font-size: 12px;
+    color: #6e7072;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/*= text label input Model style =*/
+.textInput {
+    height: 20px;
+    line-height: 20px;
+}
+
+.textInput input {
+    float: left;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+.taskInquiry {
+    margin-bottom: 10px;
+    margin-top: 18px;
+}
+
+.taskInquiry .textLabelModule {
+    /*margin-left: 28%;*/
+}
+
+.taskInquiryCon {
+    padding: 4px 20px;
+    background-color: #fbfbfb;
+    border: 1px solid #dbdbde;
+    font-size: 12px;
+    position: relative;
+    -moz-border-top-left-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.taskInquiryCon .k-i-arrow-s {
+    background-position: -14px -222px
+}
+
+.taskInquiryCon .leftTop,
+.taskInquiryCon .rightTop,
+.toggleTop .leftButtom,
+.toggleTop .rightButtom {
+    display: inline-block;
+    width: 4px;
+    height: 5px;
+    background: url("../images/corner.png") no-repeat 0 0;
+    position: absolute;
+}
+
+.taskInquiryCon .leftTop {
+    left: -1px;
+    top: -1px;
+}
+
+.taskInquiryCon .rightTop {
+    background-position: -4px 0;
+    right: -1px;
+    top: -1px;
+}
+
+.toggleTop .leftButtom {
+    background-position: 0 -4px;
+    left: -1px;
+    bottom: -2px;
+}
+
+.toggleTop .rightButtom {
+    background-position: -4px -4px;
+    right: -1px;
+    bottom: -2px;
+}
+
+.taskInquiryCon .horizontalLineIco {
+    margin: 13px 0px;
+    width: 6%;
+    float: left;
+}
+
+.submit_from {
+    position: relative;
+    border: 1px solid #d0d0d0;
+    border-top: none;
+    padding: 4px 0;
+    background-color: #fbfbfb;
+    box-shadow: -1px 3px 3px #f1f0f0;
+    -moz-border-bottom-left-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.toggleTop {
+    width: 77px;
+    height: 17px;
+    border: 1px solid #d0d0d0;
+    border-top: none;
+    background-color: #fbfbfb;
+    position: relative;
+    margin: auto;
+    box-shadow: -1px 3px 3px #f1f0f0;
+    top: -1px;
+    cursor: pointer;
+    -moz-border-bottom-left-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.toggleTop .currentTop {
+    display: block;
+    width: 77px;
+    height: 17px;
+    background: url("../images/toggle.png") no-repeat 33px -31px;
+}
+
+.toggleBot .currentTop {
+    display: block;
+    width: 77px;
+    height: 17px;
+    background: url("../images/toggle.png") no-repeat 35px 5px;
+    cursor: pointer;
+}
+
+/*= Module title and Button =*/
+.titleBox {
+    font-size: 0px;
+    padding-bottom: 6px;
+}
+
+.titleBox h2 {
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.titleBox label {
+    font-size: 12px;
+}
+
+.titleBox span,
+.titleBox .button {
+    vertical-align: middle;
+}
+
+.titleBox .button {
+    margin-left: 5px;
+}
+
+.titleBox .seprateLine {
+    margin: 0px 8px;
+}
+
+.titleBox h2 img {
+    margin-right: 8px;
+    vertical-align: bottom;
+}
+
+/* Table label */
+.textLabelModule {
+    display: inline-block;
+    margin-left: 15%;
+    line-height: 13px;
+}
+
+.textLabelLongModule {
+    display: inline-block;
+    margin-left: 5%;
+    line-height: 13px;
+}
+
+.textLabelModuleTitle {
+    display: inline-block;
+    line-height: 13px;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+.textLabelModule.first {
+    margin: 0px !important;
+}
+
+.textLabelModule span {
+    float: left;
+}
+
+.textLabelModule label,
+.textLabelModule label.floatL {
+    float: none;
+    display: block;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.mgR10px {
+    margin-right: 10px !important;
+}
+
+.seprateLine {
+    display: inline-block;
+    border-left: 1px solid #cacaca;
+    height: 20px;
+    margin: 0px 5px;
+    vertical-align: middle;
+}
+
+.seprateLine.mgL10px {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+
+    .modal-sm {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+.ui-grid-pager-control input[type=number] {
+    line-height: 28px;
+    height: 28px;
+    padding: 0px;
+    margin: 0px;
+}
+.ui-grid-pager-container input[type=text]{
+    height: 28px;
+    line-height: 28px;
+    padding: 0px;
+    margin: 0px;
+}
+.form-control{
+    padding:0px;
+    height: 28px;
+    line-height: 28px;
+    cursor:hand;
+}

@@ -1,0 +1,64 @@
+<div class="breadcrumbs">
+  <span class="siteHomeIco"></span><a href="#">任务管理</a> &gt;
+  <a href="#">任务分配</a>
+</div>
+<div class="taskInquiry">
+			        <div id="searchConditionDiv" class="taskInquiryCon k-content" ng-show="vm.visible">
+			            <table>
+			                <colgroup>
+			                    <col width="9%"/>
+			                    <col width="23%"/>
+			                    <col width="11%"/>
+			                    <col width="23%"/>
+			                    <col width="11%"/>
+			                    <col width="23%"/>
+			                </colgroup>
+			                <tr>
+			                    <td align="left">
+			                    <span class="textLabelModule first">
+			                        <label>名称</label>
+			                    </span>
+			                    </td>
+			                    <td><input type="text" ng-model="vm.condition.siteName"  class="form-control"/></td>
+
+			                    <td align="left">
+			                    <span class="textLabelModule">
+			                        <label>所属行政区划</label>
+			                    </span>
+			                    </td>
+			                    <td><select  class="form-control" ng-options="p.district group by p.city for p in vm.provinces track by p.regionId" ng-model="vm.condition.regionId">
+			                    <option lab=""></option></select></td>
+			                </tr>
+			            </table>
+			        </div>
+			        <div class="submit_from" ng-show="vm.visible">
+			            <div class="submit_btn task_btnDiv" align="center">
+			                <div class="button mainBtn" id="btnSearch"><span class="buttonText" ng-click="vm.query()">查 询</span></div>
+			                <div class="button mainBtn mgL5px" id="btnReset"><span class="buttonText" ng-click="vm.reset()">重 置</span></div>
+			            </div>
+			            <span class="leftButtom lfR"></span><span class="rightButtom rtR"></span>
+			        </div>
+        			<div class="topLine"></div>
+       				<div ng-class="{'toggleTop':vm.visible, 'toggleBot toggleTop':!vm.visible}" id="btnToggleSearchPanel" ng-click="vm.togglePanel()"><span class="currentTop"></span></div>
+    </div>
+
+    <div class="titleBox">
+        <h2>扫描地列表</h2>
+        <span class="seprateLine"></span>
+        <div class="comBtn button mgR10px"  ng-click="vm.addNew()">
+            <span  class="buttonText IcoTextBtnBox">
+                <span class="btnAddIco"></span>
+                <label>分配</label>
+            </span>
+        </div>
+    </div>
+    <div id="taskListResultDiv" >
+    	<div ui-grid="gridOptions" ui-grid-pagination  ui-grid-resize-columns ui-grid-selection class="grid" ></div>
+    </div>
+   </div>
+   <hr>
+   <footer>
+                <div style="position:absolute;left:45%">&copy; 北京普信恒业科技有限公司</div>
+    </footer>
+        </div>
+    </body>

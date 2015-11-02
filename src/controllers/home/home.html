@@ -1,0 +1,10 @@
+<div class="jumbotron centered">
+  <h1>Angular例子!</h1>
+</div>
+<div ng-if="home.isAuth">
+  <p>欢迎, {{home.user.username}}</p>
+  <a href="#" ng-click="home.logout($event)">退出</a>
+</div>
+<div ng-if="!home.isAuth">
+  <a ng-href="/login">登陆</a>
+</div>

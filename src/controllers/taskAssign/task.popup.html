@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h3 class="modal-title">选择人员</h3>
+</div>
+<div class="modal-body">
+    <ul>
+        <input type="text" ng-model="user" placeholder="请录入人员账号或姓名查询"
+               typeahead="user as user.userName for user in vm.getUser($viewValue)" typeahead-loading="loadingUsers"
+               typeahead-no-results="noResults" typeahead-min-length="2" typeahead-select-on-exact="true"
+               typeahead-wait-ms="50" class="form-control">
+        <i ng-show="loadingUsers" class="glyphicon glyphicon-refresh"></i>
+
+        <div ng-show="noResults"><i class="glyphicon glyphicon-remove"></i> 找不到符合条件的记录</div>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="vm.ok()">分配</button>
+    <button class="btn btn-warning" type="button" ng-click="vm.cancel()">关闭</button>
+</div>
