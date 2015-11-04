@@ -4,7 +4,7 @@ Angular+ES6例子 [backend-sample](https://github.com/yanming3/backend-sample.gi
 
 ## Usage
 
-该DEMO运行，需要后台支持，请参考实现 [backend-server-sample](https://github.com/yanming3/backend-server-sample.git)
+该DEMO运行，需要后台支持，请参考实现 [backend-server-sample](https://github.com/yanming3/angular-demo-backend.git)
 
 ```shell
 $ git clone https://github.com/yanming3/backend-sample.git
