@@ -1,5 +1,6 @@
 import angular from 'angular';
 import ngRoute from 'angular-route';
+import constant from '../constant/constant';
 
 import jwtDecode from 'jwt-decode';
 
@@ -83,8 +84,7 @@ function interceptor($httpProvider) {
 }
 interceptor.$inject = ['$httpProvider'];
 
-export default angular.module('services.auth', [ngRoute])
+export default angular.module('services.auth', [ngRoute,constant])
     .service('authService', AuthService)
-   // .service('authInterceptor', AuthInterceptor)
     .config(interceptor)
     .name;

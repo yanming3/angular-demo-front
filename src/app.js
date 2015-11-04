@@ -30,9 +30,6 @@ angular.module('app', [
     assign,
     manage,
     query])
-    .constant('config', {
-        apiUrl: 'http://10.36.40.48:3001'
-    })
     .directive('demo', createDirectiveFactory(DemoDirective))
     .config(routing).filter('scanFilter', function () {
         return function (status) {
